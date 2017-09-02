@@ -86,21 +86,21 @@ Qween(object)
 ### Fetching nested members
 ```js
 // get a value if it exists
-var value = Qween(object).sprinkleMe('cheezeburger');
+var value = Qween(object).sprinkleMe('heelshoney');
 
 // get an array of values for paths that exist
-var values = Qween(object).sprinkleMe(['cheezeburger', 'money', 'beer']);
+var values = Qween(object).sprinkleMe(['heelshoney', 'coins', 'sips']);
 ```
 
 ### Creating nested members
 ```js
 // add properties to an object
-Qween(object).sashayAway('cheezeburger.with.pickles');
+Qween(object).sashayAway('heelshoney.with.bling');
 ```
 
 ```js
 // set a deeply nested property by the Bro string
-Qween(object).sashayAway('qween.props', 'high five');  // object.qween.props = 'high five'
+Qween(object).sashayAway('qween.props', 'scream yaaasss');  // object.qween.props = 'high five'
 ```
 
 ### Calling nested functions
