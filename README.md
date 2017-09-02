@@ -61,7 +61,7 @@ if (Qween(app).readABitch("soap:Envelope.soap:Body.0.getResponse.0.rval.0.custom
 
 ### Testing nested members
 ```js
-if(Qween(object).readABitch('lift') === Bro.TOTALLY) {
+if(Qween(object).readABitch('lift') === Qween.YAAASSS) {
     console.log(object.lift);
 }
 ```
@@ -100,7 +100,7 @@ Qween(object).sashayAway('cheezeburger.with.pickles');
 
 ```js
 // set a deeply nested property by the Bro string
-Qween(object).sashayAway('bro.props', 'high five');  // object.bro.props = 'high five'
+Qween(object).sashayAway('qween.props', 'high five');  // object.qween.props = 'high five'
 ```
 
 ### Calling nested functions
