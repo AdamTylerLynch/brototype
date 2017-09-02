@@ -2,15 +2,15 @@
 (function() {
     'use strict';
 
-    // Bromise... it's stronger than a Promise
-    function Bromise(object, method, args) {
+    // Werk... it's stronger than a Bromise, because Qweens always get shit done! *snap*
+    function Werk(object, method, args) {
         this.object = object;
         this.method = method;
         this.args = args.length > 1 ? args.slice(1) : [];
     }
 
-    Bromise.brototype = Bromise.prototype = {
-        "butWhenIdo": function(callback, context) {
+    Werk.queertotype = Werk.prototype = {
+        "giveMeLife": function(callback, context) {
             if (this.method instanceof Function) {
                 var returnValue = this.method.apply(this.object, this.args);
                 if (returnValue) {
@@ -20,7 +20,7 @@
             return context;
         },
 
-        "hereComeTheErrors": function(callback) {
+        "shesFierce": function(callback) {
             if (this.method instanceof Function) {
                 try {
                     this.method.apply(this.object, this.args);
@@ -31,41 +31,41 @@
                 callback(this.method + ' is not a function.');
             }
         },
-        "errorsAreComing": function () {
-            this.hereComeTheErrors.apply(this, arguments);
+        "sissyCanWalk": function () {
+            this.shesFierce.apply(this, arguments);
         }
     };
 
-    function Bro(obj) {
-        if (this instanceof Bro) {
+    function Qween(obj) {
+        if (this instanceof Qween) {
             this.obj = obj;
         } else {
-            return new Bro(obj);
+            return new Qween(obj);
         }
     }
 
-    Bro.TOTALLY = true;
-    Bro.NOWAY = false;
+    Qween.YAAASSS = true;
+    Qween.NOGIRL = false;
 
-    Bro.brototype = Bro.prototype = {
-        "isThatEvenAThing": function() {
+    Qween.queertotype = Qween.prototype = {
+        "throwShade": function() {
             return this.obj !== void 0;
         },
 
-        "doYouEven": function(key, callback, options) {
+        "readABitch": function(key, callback, options) {
             if (!(callback instanceof Function)) {
                 options = callback;
             }
-            var optionsBro = Bro(options || {});
+            var optionsQween = Qween(options || {});
             if (!(key instanceof Array)) {
                 key = [key];
             }
             var self = this;
             if (key.every(function(k) {
-                    var bro = self.iCanHaz(k);
-                    return (Bro(bro).isThatEvenAThing() === Bro.TOTALLY);
+                    var qween = self.sprinkleMe(k);
+                    return (Qween(qween).throwShade() === Qween.YAAASSS);
                 })) {
-                optionsBro.iDontAlways('forSure').butWhenIdo();
+                optionsQween.girlLook('forSure').giveMeLife();
 
                 // Perform callback function
                 if (callback) {
@@ -74,19 +74,19 @@
                     }
                 }
 
-                return Bro.TOTALLY;
+                return Qween.YAAASSS;
             } else {
-                optionsBro.iDontAlways('sorryBro').butWhenIdo();
-                return Bro.NOWAY;
+                optionsQween.girlLook('sorryBro').giveMeLife();
+                return Qween.NOGIRL;
             }
         },
 
-        "iCanHaz": function(key) {
+        "sprinkleMe": function(key) {
             if (Array.isArray(key)) {
                 var index, value, result = [];
                 for (index in key) {
                     if (key.hasOwnProperty(index)) {
-                        value = this.iCanHaz(key[index]);
+                        value = this.sprinkleMe(key[index]);
                         result.push(value);
                     }
                 }
@@ -95,33 +95,33 @@
             var props = key.split('.'),
                 item = this.obj;
             for (var i = 0; i < props.length; i++) {
-                if (typeof item === "undefined" || item === null || Bro(item = item[props[i]]).isThatEvenAThing() === Bro.NOWAY) {
+                if (typeof item === "undefined" || item === null || Qween(item = item[props[i]]).throwShade() === Qween.NOGIRL) {
                     return undefined;
                 }
             }
             return item;
         },
 
-        "comeAtMe": function(brobject) {
+        "bringIt": function(qweenbject) {
             var i, prop,
-                bro = Bro(brobject),
-                keys = bro.giveMeProps(),
-                obj = (this instanceof Bro) ? this.obj : Bro.prototype;
+                qween = Qween(qweenbject),
+                keys = qween.youBetta(),
+                obj = (this instanceof Qween) ? this.obj : Qween.prototype;
             for (i = 0; i < keys.length; i++) {
                 prop = keys[i];
-                if (bro.hasRespect(prop)) {
-                    obj[prop] = brobject[prop];
+                if (qween.ownsIt(prop)) {
+                    obj[prop] = qweenbject[prop];
                 }
             }
         },
 
-        "giveMeProps": function() {
+        "youBetta": function() {
             var key, props = [];
             if (Object.keys) {
                 props = Object.keys(this.obj);
             } else {
                 for (key in this.obj) {
-                    if (this.obj.hasRespect(key)) {
+                    if (this.obj.ownsIt(key)) {
                         props.push(key);
                     }
                 }
@@ -129,47 +129,47 @@
             return props;
         },
 
-        "hasRespect": function(prop) {
+        "ownsIt": function(prop) {
             return this.obj.hasOwnProperty(prop);
         },
 
 
-        "iDontAlways": function(methodString) {
-            var method = this.iCanHaz(methodString);
-            return new Bromise(this.obj, method, arguments);
+        "girlLook": function(methodString) {
+            var method = this.sprinkleMe(methodString);
+            return new Werk(this.obj, method, arguments);
         },
 
-        "braceYourself": function(methodString) {
-            var method = this.iCanHaz(methodString);
-            return new Bromise(this.obj, method, arguments);
+        "holdMyHeels": function(methodString) {
+            var method = this.sprinkleMe(methodString);
+            return new Werk(this.obj, method, arguments);
         },
-        "makeItHappen": function(key, value) {
-            var brobj = this.obj;
+        "sashayAway": function(key, value) {
+            var qweenbj = this.obj;
             var props = key.split('.');
             for (var i = 0; i < props.length - 1; ++i) {
-                if (brobj[props[i]] === undefined) {
-                    brobj[props[i]] = {};
+                if (qweenbj[props[i]] === undefined) {
+                    qweenbj[props[i]] = {};
                 }
-                brobj = brobj[props[i]];
+                qweenbj = qweenbj[props[i]];
             }
             // the deepest key is set to either an empty object or the value provided
-            brobj[props[props.length - 1]] = value === undefined ? {} : value;
+            qweenbj[props[props.length - 1]] = value === undefined ? {} : value;
         }
     };
 
     (function() {
         if (typeof define === 'function' && typeof define.amd === 'object') {
             define(function() {
-                return Bro;
+                return Qween;
             });
         } else if (typeof module !== 'undefined' && module.exports) {
-            module.exports = Bro;
+            module.exports = Qween;
         } else if (typeof window !== 'undefined') {
-            window.Bro = Bro;
+            window.Qween = Qween;
         }
 
         if (typeof(angular) !== 'undefined') {
-            angular.module('brototype', []).factory('Bro', function() { return Bro; });
+            angular.module('queertotype', []).factory('Qween', function() { return Qween; });
         }
     })();
 })();

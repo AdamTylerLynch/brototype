@@ -1,12 +1,9 @@
-[![build status][travis-image]][travis-url]
-[![Codacy Badge](https://www.codacy.com/project/badge/ec7e9f08d94447188b0b5072ba3eac31)](https://www.codacy.com/app/letsgetrandy/brototype)
-[![Code Climate](https://codeclimate.com/repos/555a0d98695680378e0034bd/badges/04a1db801508665091d9/gpa.svg)](https://codeclimate.com/repos/555a0d98695680378e0034bd/feed)
-[![bitHound Score](https://www.bithound.io/github/letsgetrandy/brototype/badges/score.svg)](https://www.bithound.io/github/letsgetrandy/brototype)
 
-brototype
+
+queertotype
 =========
 
-Bro, do you even javascript?
+Girl, I can't even. My IDE isn't nearly feirce enough.
 
 ## Features
 
@@ -29,7 +26,7 @@ We all hate that, don't we?
 So what if you could just type:
 ```js
 var myURL;
-if (Bro(app).doYouEven('config.environment.buildURL')) {
+if (Qween(app).readABitch('config.environment.buildURL')) {
     myURL = app.config.environment.buildURL('dev');
 }
 ```
@@ -37,9 +34,9 @@ if (Bro(app).doYouEven('config.environment.buildURL')) {
 Or better yet, how about:
 ```js
 var myURL;
-Bro(app)
-    .iDontAlways('config.environment.buildURL')
-    .butWhenIdo(function(buildURL){
+Qween(app)
+    .girlLook('config.environment.buildURL')
+    .giveMeLife(function(buildURL){
         myURL = buildURL('dev');
     });
 ```
@@ -55,7 +52,7 @@ app['soap:Envelope']['soap:Body'][0].getResponse[0]['rval'][0].customerId[0]
 We got you covered.
 
 ```js
-if (Bro(app).doYouEven("soap:Envelope.soap:Body.0.getResponse.0.rval.0.customerId.0")) {
+if (Qween(app).readABitch("soap:Envelope.soap:Body.0.getResponse.0.rval.0.customerId.0")) {
     var thisVar = app['soap:Envelope']['soap:Body'][0].getResponse[0]['rval'][0].customerId[0];
 }
 ```
@@ -64,15 +61,15 @@ if (Bro(app).doYouEven("soap:Envelope.soap:Body.0.getResponse.0.rval.0.customerI
 
 ### Testing nested members
 ```js
-if(Bro(object).doYouEven('lift') === Bro.TOTALLY) {
+if(Qween(object).readABitch('lift') === Bro.TOTALLY) {
     console.log(object.lift);
 }
 ```
 
 Or, ensure that multiple nested members exist by passing an array of paths
 ```js
-if (Bro(object)
-    .doYouEven(['property.one', 'property.two']) {
+if (Qween(object)
+    .readABitch(['property.one', 'property.two']) {
     // returns true if all referenced properties exist
     console.log(object.property.one, object.property.two);
 })
@@ -80,8 +77,8 @@ if (Bro(object)
 
 Or, just use a callback...
 ```js
-Bro(object)
-    .doYouEven('property.subproperty', function(subproperty) {
+Qween(object)
+    .readABitch('property.subproperty', function(subproperty) {
         console.log(subproperty);
     });
 ```
@@ -89,50 +86,50 @@ Bro(object)
 ### Fetching nested members
 ```js
 // get a value if it exists
-var value = Bro(object).iCanHaz('cheezeburger');
+var value = Qween(object).sprinkleMe('cheezeburger');
 
 // get an array of values for paths that exist
-var values = Bro(object).iCanHaz(['cheezeburger', 'money', 'beer']);
+var values = Qween(object).sprinkleMe(['cheezeburger', 'money', 'beer']);
 ```
 
 ### Creating nested members
 ```js
 // add properties to an object
-Bro(object).makeItHappen('cheezeburger.with.pickles');
+Qween(object).sashayAway('cheezeburger.with.pickles');
 ```
 
 ```js
 // set a deeply nested property by the Bro string
-Bro(object).makeItHappen('bro.props', 'high five');  // object.bro.props = 'high five'
+Qween(object).sashayAway('bro.props', 'high five');  // object.bro.props = 'high five'
 ```
 
 ### Calling nested functions
 ```js
-Bro(object)
-    .iDontAlways('method')
-    .butWhenIdo(function(returnVal) {
+Qween(object)
+    .girlLook('method')
+    .giveMeLife(function(returnVal) {
         console.log('object.method() returned ', returnVal);
     });
 ```
 
 ### Handling exceptions
 ```js
-Bro(object)
-    .braceYourself('method.name')
-    .hereComeTheErrors(function(e) {
+Qween(object)
+    .holdMyHeels('method.name')
+    .shesFierce(function(e) {
         console.log('error ' + e + ' happened.');
     });
 ```
 
-### Bro-oleans
+### Qween-oleans
 ```js
-Bro.TOTALLY // true;
-Bro.NOWAY   // false;
+Qween.YAAASSS // true;
+Qween.NOGIRL   // false;
 ```
 
 ### Check for undefined
 ```js
-if (Bro(someVar).isThatEvenAThing() === Bro.TOTALLY) {
+if (Qween(someVar).throwShade() === Qween.YAAASSS) {
     // do stuff
 }
 ```
@@ -140,7 +137,7 @@ if (Bro(someVar).isThatEvenAThing() === Bro.TOTALLY) {
 ### Get a list of object keys
 ```js
 var object = {foo: 1, bar: 2};
-Bro(object).giveMeProps();
+Qween(object).youBetta();
 // returns ['foo', 'bar'];
 ```
 
@@ -148,57 +145,36 @@ Bro(object).giveMeProps();
 ```js
 var obj1 = {foo: 'boo', bar: 'bar'},
     obj2 = {foo: 'bar', yes: 'no'};
-Bro(obj1).comeAtMe(obj2);
+Qween(obj1).bringIt(obj2);
 
 // now obj1.foo == 'bar' and obj1.yes == 'no'
 ```
 
-### Extending Brototype!
-Yes, extend me, Bro!
+### Extending queertotype!
+YAAASSS, extend me, Qween!
 
 ```js
 var plugin = { foo: function() { whatever; }};
-Bro.prototype.comeAtMe(plugin);
+Qween.prototype.sashayAway(plugin);
 ```
 
 
 ## Installing
-brototype is available via npm or bower
+queertotype is NOT available via npm or bower, I didn't feel like packaging it.
 ```bash
 # via npm
-$ npm install brototype
+$ npm install queertotype
 
 # via bower
-$ bower install brototype
+$ bower install queertotype
 ```
 
-## Contributing
-Brototype.js may be funny, but it is also quite useful, as demonstrated by the
-number of people who have already installed it via
-[npm](https://www.npmjs.org/package/brototype).
 
-Therefore, there is some responsibility to add/update the library responsibly.
-Please have a look at the
-[guidelines for contributing to Brototype](https://github.com/letsgetrandy/brototype/wiki/Contributing)
-before submitting your pull request.
-
-
-## Bro-tie
-For the brofessional. Want to use Brototype.js but it's too bro for your work
-environment? Just give it the [Bro-tie](http://pepperthecat.github.io/brotie/) treatment
-so you can bro down at the office!
-Alias some or all of the names to make your boss happy.
-
-## Do you even Brototype?
-Are you using Brototype in the wild?
-If so, [tell the world](https://github.com/letsgetrandy/brototype/issues/10)!
-
-Also, don't forget to follow [@BrototypeJS](https://twitter.com/Brototypejs) on Twitter!
 
 
 ## Author
 
-Randy Hunt
+Tyler Lynch, forked and queer'ed from Randy Hunt. Isn't there enough bro-ish shit in IT?
 
 ## License
 
@@ -213,5 +189,3 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-[travis-image]: https://img.shields.io/travis/letsgetrandy/brototype/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/letsgetrandy/brototype

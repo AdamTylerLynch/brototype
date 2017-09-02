@@ -1,21 +1,21 @@
 {
-  "name": "brototype",
+  "name": "queertotype",
   "version": "0.0.6",
-  "description": "Bro, do you even Javascript?",
-  "main": "brototype.js",
+  "description": "Don't we have enough bro-ish shit in IT? Let's qweer it up! YAAASSS QWEEN! (forked form https://github.com/letsgetrandy/brototype)",
+  "main": "queertotype.js",
   "scripts": {
     "test": "mocha tests.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/letsgetrandy/brototype.git"
+    "url": "https://github.com/adamtylerlynch/queertotype.git"
   },
-  "author": "Randy Hunt",
+  "author": "Tyler Lynch, forked and queer'ed from Randy Hunt",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/letsgetrandy/brototype/issues"
+    "url": "https://github.com/letsgetrandy/queertotype/issues"
   },
-  "homepage": "http://brototypejs.com",
+  "homepage": "",
   "dependencies": {},
   "devDependencies": {
     "mocha": "~2.2"

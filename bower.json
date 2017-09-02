@@ -1,17 +1,19 @@
 {
-  "name": "brototype",
-  "main": "brototype.js",
-  "homepage": "http://brototypejs.com/",
+  "name": "queertotype",
+  "main": "queertotype.js",
+  "homepage": "http://queertotypejs.com/",
   "authors": [
     "Randy Hunt <letsgetrandy@gmail.com>"
   ],
-  "description": "Bro, do you even Javascript?",
+  "description": "Don't we have enough bro-ish shit in IT? Let's qweer it up! YAAASSS QWEEN! (forked form https://github.com/letsgetrandy/brototype)",
   "moduleType": [
     "amd"
   ],
   "keywords": [
-    "brototype",
-    "bro"
+    "queertotype",
+    "yaaaas",
+    "fuckbroculture",
+    "qweensrule, bros drool"
   ],
   "license": "MIT",
   "ignore": [
