@@ -3,7 +3,7 @@
 queertotype
 =========
 
-Girl, I can't even. My IDE isn't nearly feirce enough.
+Girl, I can't even. My IDE isn't nearly fierce enough.
 
 ## Features
 
